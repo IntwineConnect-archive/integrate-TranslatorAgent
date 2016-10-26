@@ -39,10 +39,10 @@ class TranslatorAgent(Agent):
             
         eventID = mesdict.get("event_ID", 0)
         eventType = mesdict.get("event_type", "simple_signal")
-        priority = mesdict.get("priority", 1)
+        priority = int(mesdict.get("priority", 1))
         startTime = mesdict.get("start_time", "now")
         duration = mesdict.get("duration", 0).replace("S","")
-        payload = mesdict.get("signalPayload",None)
+        payload = int(mesdict.get("signalPayload",0))
         
         
         
